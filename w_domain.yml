@@ -1,0 +1,42 @@
+%YAML 1.1
+---
+actions:
+- utter_intro
+- utter_thx
+- action_weather
+- utter_goodbye
+- utter_ask_location
+- utter_greet
+- utter_joke
+entities:
+- location
+intents:
+- joke
+- inform
+- greet
+- intro
+- thx
+- goodbye
+slots:
+  location:
+    type: text
+templates:
+  utter_ask_location:
+  - text: In what location?
+  - text: where?
+  utter_default:
+  - text: Sorry, unable to understand.
+  utter_goodbye:
+  - text: Talk to you later.
+  - text: Bye bye.
+  utter_greet:
+  - text: Hello! How can I help?
+  - text: Hi there, android?
+  utter_intro:
+  - text: I can have small chat and tell you the weather.
+  utter_joke:
+  - text: What do you call a labrador that becomes a magician? A labracadabrador.
+  - text: I do not have time for nonsense.
+  utter_thx:
+  - text: You are welcome.
+  - text: My pleasure.

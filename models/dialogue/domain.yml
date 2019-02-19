@@ -1,0 +1,53 @@
+%YAML 1.1
+---
+actions:
+- utter_intro
+- utter_greet
+- action_weather
+- utter_thx
+- utter_ask_location
+- utter_goodbye
+- utter_joke
+config:
+  store_entities_as_slots: true
+entities:
+- location
+forms: []
+intents:
+- goodbye:
+    use_entities: true
+- intro:
+    use_entities: true
+- greet:
+    use_entities: true
+- thx:
+    use_entities: true
+- joke:
+    use_entities: true
+- inform:
+    use_entities: true
+slots:
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_location:
+  - text: In what location?
+  - text: where?
+  utter_default:
+  - text: Sorry, unable to understand.
+  utter_goodbye:
+  - text: Talk to you later.
+  - text: Bye bye.
+  utter_greet:
+  - text: Hello! How can I help?
+  - text: Hi there, android?
+  utter_intro:
+  - text: I can have small chat and tell you the weather.
+  utter_joke:
+  - text: What do you call a labrador that becomes a magician? A labracadabrador.
+  - text: I do not have time for nonsense.
+  utter_thx:
+  - text: You are welcome.
+  - text: My pleasure.
